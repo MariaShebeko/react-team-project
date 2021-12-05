@@ -1,5 +1,15 @@
 import * as colors from './colors';
 
+const flexXYCenter = `
+display: flex;
+align-items: center;
+justify-content: center;
+`;
+const pseudo = `
+content: '';
+position: absolute;
+`;
+
 export function getStyles(params) {
   return {
     accentColor: colors.accentColor,
@@ -16,5 +26,7 @@ export function getStyles(params) {
     redColor: colors.redColor,
     orangeColor: colors.orangeColor,
     yellowColor: colors.yellowColor,
+    flexXYCenter,
+    pseudo,
   };
 }
