@@ -19,11 +19,16 @@ const ContainerWrapper = styled.div`
 `;
 
 const Container = ({ className, children }) => {
-  return <ContainerWrapper className={className}>{children}</ContainerWrapper>;
+  return (
+    <ContainerWrapper className={className ? className : ''}>
+      {children}
+    </ContainerWrapper>
+  );
 };
 
 Container.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default Container;

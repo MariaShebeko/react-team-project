@@ -47,9 +47,7 @@ const IconWrapper = styled.div`
   border-radius: 19px;
 
   background-color: ${({ iconType }) => IconWrapperTypes[iconType].background};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${styles.flexXYCenter}
 `;
 
 const FeatureHeader = styled.h3`
