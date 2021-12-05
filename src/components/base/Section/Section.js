@@ -6,11 +6,16 @@ const SectionWrapper = styled.section`
 `;
 
 const Section = ({ className, children }) => {
-  return <SectionWrapper className={className}>{children}</SectionWrapper>;
+  return (
+    <SectionWrapper className={className ? className : ''}>
+      {children}
+    </SectionWrapper>
+  );
 };
 
 Section.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default Section;
