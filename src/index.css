@@ -1,4 +1,11 @@
 @import-normalize;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 button {
   cursor: pointer;
 }
