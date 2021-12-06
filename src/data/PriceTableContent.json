@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Free",
+    "description": "Brief price description",
+    "price": "0",
+    "currency": "$",
+    "duration": "per/month",
+    "operators": "Only 2 Operators",
+    "notification": "Notifications",
+    "typeCite": "Landing Pages",
+    "btnType": "bright",
+    "btnText": "Order Now",
+    "cardType": "light"
+  },
+  {
+    "title": "Standard",
+    "description": "Brief price description",
+    "price": "5",
+    "currency": "$",
+    "duration": "per/month",
+    "operators": "5+ Operators",
+    "notification": "Notifications",
+    "typeCite": "Landing Pages",
+    "btnType": "light",
+    "btnText": "Order Now",
+    "cardType": "dark"
+  },
+  {
+    "title": "Premium",
+    "description": "Brief price description",
+    "price": "10",
+    "currency": "$",
+    "duration": "per/month",
+    "operators": "10+ Operators",
+    "notification": "Notifications",
+    "typeCite": "Landing Pages",
+    "btnType": "bright",
+    "btnText": "Order Now",
+    "cardType": "light"
+  }
+]
