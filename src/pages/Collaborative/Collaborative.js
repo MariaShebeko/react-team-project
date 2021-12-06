@@ -4,7 +4,7 @@ import './Collaborative.css';
 // import Icon from '../../components/Icon';
 import Container from '../../components/base/Container/Container';
 import styled from 'styled-components';
-// import SVGcheked from '../../img/svg/checked.svg'
+// import SVGcheked from '../../img/svg/checked.svg';
 
 const CollaborativeSection = styled.section`
   padding-top: 75px;
