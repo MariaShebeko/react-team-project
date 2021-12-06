@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ContainerWrapper = styled.div`
+export const ContainerWrapper = styled.div`
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;

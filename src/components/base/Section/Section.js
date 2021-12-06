@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const SectionWrapper = styled.section`
+export const SectionWrapper = styled.section`
   padding: 75px 0;
 `;
 
