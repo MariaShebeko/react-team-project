@@ -2,11 +2,12 @@ import React from 'react';
 import './Collaborative.css';
 // import PropTypes from 'prop-types';
 // import Icon from '../../components/Icon';
+import Section from '../../components/base/Section/Section';
 import Container from '../../components/base/Container/Container';
 import styled from 'styled-components';
 // import SVGcheked from '../../img/svg/checked.svg';
 
-const CollaborativeSection = styled.section`
+const CollaborativeBackground = styled.div`
   padding-top: 75px;
   padding-bottom: 75px;
 `;
@@ -84,35 +85,38 @@ const CollaborativeItemParagraph = styled.p`
 
 function Collaborative(props) {
   return (
-    <CollaborativeSection className="collaborativeImageWrapper">
-      <Container>
-        <CollaborativeWrapper>
-          <Subheading>Optimisation for</Subheading>
-          <Heading>Collaborative</Heading>
-          <CollaborativeParagraph>
-            Few would argue that, despite the advancements of <br />
-            feminism over the past three decades, women still face a <br />
-            double standard when it comes to their behavior.
-          </CollaborativeParagraph>
-          <ul>
-            <CollaborativeItem>
-                          <CollaborativeheadingParagraph>Accessory makers</CollaborativeheadingParagraph>
-                          <CollaborativeItemParagraph>
-                              While most people enjoy casino gambling, sports betting, <br />
-                              lottery and bingo playing for the fun
-                          </CollaborativeItemParagraph>
-            </CollaborativeItem>
-            <CollaborativeItem>
-                          <CollaborativeheadingParagraph>Alterationists</CollaborativeheadingParagraph>
-                          <CollaborativeItemParagraph>
-                              If you are looking for a new way to promote your business <br />
-                              that won’t cost you more money,
-                          </CollaborativeItemParagraph>
-            </CollaborativeItem>
-          </ul>
-        </CollaborativeWrapper>
+    <Section>
+      <Container className="collaborativeImageWrapper">
+          <CollaborativeBackground>
+            <CollaborativeWrapper>
+              <Subheading>Optimisation for</Subheading>
+              <Heading>Collaborative</Heading>
+              <CollaborativeParagraph>
+                Few would argue that, despite the advancements of <br />
+                feminism over the past three decades, women still face a <br />
+                double standard when it comes to their behavior.
+              </CollaborativeParagraph>
+              <ul>
+                <CollaborativeItem>
+                              <CollaborativeheadingParagraph>Accessory makers</CollaborativeheadingParagraph>
+                              <CollaborativeItemParagraph>
+                                  While most people enjoy casino gambling, sports betting, <br />
+                                  lottery and bingo playing for the fun
+                              </CollaborativeItemParagraph>
+                </CollaborativeItem>
+                <CollaborativeItem>
+                              <CollaborativeheadingParagraph>Alterationists</CollaborativeheadingParagraph>
+                              <CollaborativeItemParagraph>
+                                  If you are looking for a new way to promote your business <br />
+                                  that won’t cost you more money,
+                              </CollaborativeItemParagraph>
+                </CollaborativeItem>
+              </ul>
+            </CollaborativeWrapper>
+        </CollaborativeBackground>
       </Container>
-    </CollaborativeSection>
+    </Section>
+
   );
 }
 
