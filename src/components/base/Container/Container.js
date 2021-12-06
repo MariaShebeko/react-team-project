@@ -12,17 +12,23 @@ const ContainerWrapper = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    padding-left: 145px;
-    padding-right: 145px;
+    width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;
 
 const Container = ({ className, children }) => {
-  return <ContainerWrapper className={className}>{children}</ContainerWrapper>;
+  return (
+    <ContainerWrapper className={className ? className : ''}>
+      {children}
+    </ContainerWrapper>
+  );
 };
 
 Container.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default Container;

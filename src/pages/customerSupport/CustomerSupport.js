@@ -5,23 +5,23 @@ import './CustomerSupport.css';
 import Container from '../../components/base/Container';
 import styled from 'styled-components';
 // import SVGcheked from '../../img/svg/checked.svg'
+import { getStyles } from '../../layout/layouts';
+const styles = getStyles();
 
 const CustomerSection = styled.section`
   padding-top: 75px;
   padding-bottom: 75px;
-
-  background: url(${require('../../img/customer-support/amico.png').default});
-  background-repeat: no-repeat;
-  background-position: 145px center;
-  background-size: 543px 500px;
 `;
-
 const Wrapper = styled.div`
   padding-left: 637px;
   width: 486px;
-  height: 427px;
-`;
+  height: 500px;
 
+  background: url(${require('../../img/customer-support/amico.png').default});
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 543px 500px;
+`;
 const SupTitle = styled.p`
   margin-bottom: 8px;
   width: 215px;
@@ -69,12 +69,10 @@ const ListItem = styled.li`
   font-weight: normal;
   font-size: 16px;
   line-height: 1.62;
-
   color: #22343d;
 
   ::before {
-    content: '';
-    position: absolute;
+    ${styles.pseudo}
     left: 0px;
     top: 5px;
     height: 30px;

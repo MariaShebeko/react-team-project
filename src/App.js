@@ -7,6 +7,8 @@ import CustomerSupport from './pages/customerSupport/';
 import FeaturesList from './pages/Features';
 import CollaborativeSection from './pages/Collaborative/Collaborative';
 import PriceTable from './pages/PriceTable';
+import ContactExpert from './pages/ContactExpert/ContactExpert';
+import Feedbacks from './pages/Feedbacks/Feedbacks';
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
         </Container>
       </Section>
       <FeaturesList />
+      <ContactExpert />
       <CustomerSupport />
       <PriceTable />
       <CollaborativeSection />
+      <Feedbacks />
       <Container>
         <FooterBottomPart />
       </Container>
