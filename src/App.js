@@ -1,12 +1,13 @@
 import Header from './pages/Header';
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import FeaturesList from './pages/Features';
-import CustomerSupport from './pages/CustomerSupport';
+import CustomerSupport from './pages/customerSupport';
 import CollaborativeSection from './pages/Collaborative/Collaborative';
 import ContactExpert from './pages/ContactExpert/ContactExpert';
 import PriceTable from './pages/PriceTable';
 import Feedbacks from './pages/Feedbacks/Feedbacks';
 import FooterBottomPart from './components/Footer/Footer';
+import Management from './pages/Management';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Home />
       <FeaturesList />
+      <Management />
       <CustomerSupport />
       <CollaborativeSection />
       <ContactExpert />
