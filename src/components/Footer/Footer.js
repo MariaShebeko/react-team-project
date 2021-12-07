@@ -1,15 +1,15 @@
 import React from 'react';
+import Container from '../base/Container/Container';
 import Logo from '../Logo/Logo';
 import styled from 'styled-components';
 import Icon from '../Icon';
 import Form from '../Form/Form';
 import Advertising from './Advertising';
-import Container from '../base/Container/Container';
 import { getStyles } from '../../layout/layouts';
 const styles = getStyles();
 
 const Footer = styled.footer`
-  max-width: 1110px;
+  ${'' /* max-width: 1110px; */}
 `;
 
 const FooterNav = styled.nav`
@@ -83,48 +83,50 @@ const LegalStuffList = [
 const FooterBottomPart = () => {
   return (
     <Footer>
-      <Advertising />
-      <FooterNav>
-        <LogoIconsWrapper>
-          <Logo children="Product" />
-          <Icons>
-            <Icon iconName="instagram" width="40" height="40" />
-            <Icon iconName="facebook" width="40" height="40" />
-            <Icon iconName="twitter" width="40" height="40" />
-          </Icons>
-        </LogoIconsWrapper>
-        <Wrapper>
-          <h2>Resource</h2>
-          {/* поставить компонет H */}
-          <List>
-            {ResourceList.map(item => (
-              <li key={item.name}>
-                <Link href={item.href}>{item.name}</Link>
-              </li>
-            ))}
-          </List>
-        </Wrapper>
-        <Wrapper>
-          <h2>Legal Stuff</h2>
-          {/* поставить компонет H*/}
-          <List>
-            {LegalStuffList.map(item => (
-              <li key={item.name}>
-                <Link href={item.href}>{item.name}</Link>
-              </li>
-            ))}
-          </List>
-        </Wrapper>
-        <Wrapper>
-          <h2>
-            knowing you're always on <br />
-            the best energy deal.
-          </h2>
-          {/* поставить компонет H*, <br/ временно, потом удалить> */}
-          <Form />
-        </Wrapper>
-      </FooterNav>
-      <FooterText>Made With Love By Figmaland All Right Reserved</FooterText>
+      <Container>
+        <Advertising />
+        <FooterNav>
+          <LogoIconsWrapper>
+            <Logo children="Product" />
+            <Icons>
+              <Icon iconName="instagram" width="40" height="40" />
+              <Icon iconName="facebook" width="40" height="40" />
+              <Icon iconName="twitter" width="40" height="40" />
+            </Icons>
+          </LogoIconsWrapper>
+          <Wrapper>
+            <h2>Resource</h2>
+            {/* поставить компонет H */}
+            <List>
+              {ResourceList.map(item => (
+                <li key={item.name}>
+                  <Link href={item.href}>{item.name}</Link>
+                </li>
+              ))}
+            </List>
+          </Wrapper>
+          <Wrapper>
+            <h2>Legal Stuff</h2>
+            {/* поставить компонет H*/}
+            <List>
+              {LegalStuffList.map(item => (
+                <li key={item.name}>
+                  <Link href={item.href}>{item.name}</Link>
+                </li>
+              ))}
+            </List>
+          </Wrapper>
+          <Wrapper>
+            <h2>
+              knowing you're always on <br />
+              the best energy deal.
+            </h2>
+            {/* поставить компонет H*, <br/ временно, потом удалить> */}
+            <Form />
+          </Wrapper>
+        </FooterNav>
+        <FooterText>Made With Love By Figmaland All Right Reserved</FooterText>
+      </Container>
     </Footer>
   );
 };

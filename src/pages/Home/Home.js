@@ -1,3 +1,5 @@
+import Container from '../../components/base/Container/Container';
+import Section from '../../components/base/Section/Section';
 import Icon from '../../components/Icon';
 import { getStyles } from '../../layout/layouts';
 import styled from 'styled-components';
@@ -15,27 +17,29 @@ const VideoLink = styled.a`
 
 const Home = params => {
   return (
-    <div>
-      <h1>Work at the speed of thought</h1>
-      <p>
-        Tools, tutorials, design and innovation experts, all in one place! The
-        most intuitive way to imagine your next user experience.
-      </p>
-      <div>
-        <Button btnType="bright" type="button">
-          Get started
-        </Button>
-        <VideoLink href="/">
-          <Icon
-            fill={styles.accentColor}
-            iconName="triangle"
-            width="20"
-            height="17"
-          />
-          <span>Watch the Video</span>
-        </VideoLink>
-      </div>
-    </div>
+    <Section>
+      <Container>
+        <h1>Work at the speed of thought</h1>
+        <p>
+          Tools, tutorials, design and innovation experts, all in one place! The
+          most intuitive way to imagine your next user experience.
+        </p>
+        <div>
+          <Button btnType="bright" type="button">
+            Get started
+          </Button>
+          <VideoLink href="/">
+            <Icon
+              fill={styles.accentColor}
+              iconName="triangle"
+              width="20"
+              height="17"
+            />
+            <span>Watch the Video</span>
+          </VideoLink>
+        </div>
+      </Container>
+    </Section>
   );
 };
 export default Home;

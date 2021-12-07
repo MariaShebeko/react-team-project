@@ -1,33 +1,25 @@
-import Container from './components/base/Container';
-import Section from './components/base/Section';
-import Header from './pages/Header/Header';
+import Header from './pages/Header';
 import Home from './pages/Home/Home';
-import FooterBottomPart from './components/Footer/Footer';
-import CustomerSupport from './pages/customerSupport/';
 import FeaturesList from './pages/Features';
+import CustomerSupport from './pages/CustomerSupport';
 import CollaborativeSection from './pages/Collaborative/Collaborative';
-import PriceTable from './pages/PriceTable';
 import ContactExpert from './pages/ContactExpert/ContactExpert';
+import PriceTable from './pages/PriceTable';
 import Feedbacks from './pages/Feedbacks/Feedbacks';
+import FooterBottomPart from './components/Footer/Footer';
 
 function App() {
   return (
     <>
       <Header />
-      <Section>
-        <Container>
-          <Home />
-        </Container>
-      </Section>
+      <Home />
       <FeaturesList />
-      <ContactExpert />
       <CustomerSupport />
-      <PriceTable />
       <CollaborativeSection />
+      <ContactExpert />
+      <PriceTable />
       <Feedbacks />
-      <Container>
-        <FooterBottomPart />
-      </Container>
+      <FooterBottomPart />
     </>
   );
 }
