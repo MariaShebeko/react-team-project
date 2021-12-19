@@ -8,11 +8,13 @@ import PriceTable from './pages/PriceTable';
 import Feedbacks from './pages/Feedbacks/Feedbacks';
 import FooterBottomPart from './components/Footer/Footer';
 import Management from './pages/Management';
+import WeatherWidget from './components/WeatherWidget/WeatherWidget';
 
 function App() {
   return (
     <>
       <Header />
+      <WeatherWidget />
       <Home />
       <FeaturesList />
       <Management />
