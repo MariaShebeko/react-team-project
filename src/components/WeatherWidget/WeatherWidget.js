@@ -13,7 +13,7 @@ export default function WeatherWidget() {
 
   useEffect(() => {
     getWeather(city).then(data => {
-      console.log(data);
+      // console.log(data);
       return setWeather(data);
     });
   }, []);
