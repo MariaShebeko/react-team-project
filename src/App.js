@@ -9,6 +9,7 @@ import Feedbacks from './pages/Feedbacks/Feedbacks';
 import FooterBottomPart from './components/Footer/Footer';
 import Management from './pages/Management';
 import WeatherWidget from './components/WeatherWidget/WeatherWidget';
+import Gallery from './components/InfiniteScroll';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <PriceTable />
       <Feedbacks />
       <FooterBottomPart />
+      <Gallery />
     </>
   );
 }
