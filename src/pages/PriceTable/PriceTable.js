@@ -1,6 +1,6 @@
 import Section from '../../components/base/Section';
 import Container from '../../components/base/Container';
-// import Title from '../../components/base/Title';
+import Title from '../../components/base/Title';
 import { Card } from './Card';
 import { DefaultButton } from '../../components/Button';
 import CardsContent from '../../data/PriceTableContent.json';
@@ -35,6 +35,16 @@ const Price = styled.div`
   font-weight: bold;
   line-height: 1.3;
 `;
+const CurrencyWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+const Currency = styled.div`
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+`;
 const Text = styled.p`
   margin-bottom: 16px;
   font-size: 16px;
@@ -53,8 +63,7 @@ const PriceTable = () => {
     <>
       <Section>
         <Container>
-          {/* add Title */}
-          {/* <Title></Title> */}
+          <Title title="Price Table" />
           <PriceTableText>We offer competitive price</PriceTableText>
           <TableList>
             {CardsContent.map(card => (
@@ -65,11 +74,10 @@ const PriceTable = () => {
                   <Price>
                     <p>{card.price}</p>
                   </Price>
-                  {/* style this elements */}
-                  <div>
-                    <p>{card.currency}</p>
-                    <p>{card.duration}</p>
-                  </div>
+                  <CurrencyWrapper>
+                    <Currency>{card.currency}</Currency>
+                    <div>{card.duration}</div>
+                  </CurrencyWrapper>
                 </PriceWrapper>
                 <div>
                   <Text>{card.operators}</Text>
