@@ -67,7 +67,7 @@ const PriceTable = () => {
           <PriceTableText>We offer competitive price</PriceTableText>
           <TableList>
             {CardsContent.map(card => (
-              <Card cardType={card.cardType} key={card.title}>
+              <Card key={card.title}>
                 <CardTitle>{card.title}</CardTitle>
                 <CardDescription>{card.description}</CardDescription>
                 <PriceWrapper>
