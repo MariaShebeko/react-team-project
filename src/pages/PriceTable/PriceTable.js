@@ -1,10 +1,13 @@
+import React, { useState } from 'react';
 import Section from '../../components/base/Section';
 import Container from '../../components/base/Container';
 import Title from '../../components/base/Title';
 import { Card } from './Card';
 import { DefaultButton } from '../../components/Button';
 import CardsContent from '../../data/PriceTableContent.json';
+// import Modal from '../../components/Modal';
 import styled from 'styled-components';
+import Modal from '../../components/Modal/Modal';
 
 const PriceTableText = styled.p`
   margin-bottom: 50px;
@@ -59,6 +62,12 @@ const ButtonOrder = styled(DefaultButton)`
 `;
 
 const PriceTable = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <>
       <Section>
@@ -67,7 +76,7 @@ const PriceTable = () => {
           <PriceTableText>We offer competitive price</PriceTableText>
           <TableList>
             {CardsContent.map(card => (
-              <Card cardType={card.cardType} key={card.title}>
+              <Card key={card.title}>
                 <CardTitle>{card.title}</CardTitle>
                 <CardDescription>{card.description}</CardDescription>
                 <PriceWrapper>
@@ -84,10 +93,13 @@ const PriceTable = () => {
                   <Text>{card.notification}</Text>
                   <Text>{card.typeCite}</Text>
                 </div>
-                <ButtonOrder btnType={card.btnType}>{card.btnText}</ButtonOrder>
+                <ButtonOrder btnType={card.btnType} onClick={toggleModal}>
+                  {card.btnText}
+                </ButtonOrder>
               </Card>
             ))}
           </TableList>
+          {showModal && <Modal onClose={toggleModal} />}
         </Container>
       </Section>
     </>
