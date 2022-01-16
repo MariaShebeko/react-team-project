@@ -144,7 +144,7 @@ export default function WeatherWidget() {
                   <WeatherPlace>{weather ? weather.name : city}</WeatherPlace>
                 </WeatherDescription>
               </WeatherInfo>
-              <WeatherDate>16th Jan</WeatherDate>
+              <WeatherDate>{new Date().toLocaleDateString()}</WeatherDate>
             </Widget>
           </div>
         </Container>
