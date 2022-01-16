@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import OrderForm from '../OrderForm';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -50,7 +51,7 @@ export default function Modal({ onClose }) {
   return createPortal(
     <Overlay onClick={onBackdropClick}>
       <ModalWindow>
-        <p>Here should be your content</p>
+        <OrderForm />
       </ModalWindow>
     </Overlay>,
     modalRoot,
