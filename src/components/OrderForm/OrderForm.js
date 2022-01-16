@@ -6,7 +6,6 @@ export default function OrderForm() {
           <input type="text" name="name" placeholder="Full name" />
           <input type="text" name="name" placeholder="Email" />
           <input type="text" name="name" placeholder="Phone number" />
-          <input type="text" name="name" placeholder="Type of event" />
           <select>
             <option value="number" disabled selected>
               Choose tariff plan
