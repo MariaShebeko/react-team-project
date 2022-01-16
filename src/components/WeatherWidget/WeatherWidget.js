@@ -82,12 +82,11 @@ const WeatherDate = styled.div`
 `;
 
 export default function WeatherWidget() {
-  const [city, setCity] = useState('Moscow');
+  const [city, setCity] = useState('Kyiv');
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     getWeather(city).then(data => {
-      console.log(data);
       return setWeather(data);
     });
   }, []);
@@ -99,7 +98,6 @@ export default function WeatherWidget() {
   const handleSubmit = e => {
     e.preventDefault();
     getWeather(city).then(data => {
-      console.log(data);
       return setWeather(data);
     });
     e.currentTarget.reset();
